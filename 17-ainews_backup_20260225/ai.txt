@@ -1,0 +1,133 @@
+================================================================
+ 今日のAIニュース - 2026年02月24日（火）
+================================================================
+
+【1】Anthropic、中国AI企業によるClaude悪用を告発
+  DeepSeek・Moonshot・MiniMaxが約2万4000件の偽アカウントを使いClaudeの能力を不正取得
+  1600万回以上のやり取りを通じた「産業規模のキャンペーン」と断定
+  米国がAIチップ輸出規制を議論する中でのタイミングで大きな注目を集める
+  → https://techcrunch.com/2026/02/23/anthropic-accuses-chinese-ai-labs-of-mining-claude-as-us-debates-ai-chip-exports/
+
+【2】Anthropic、ペンタゴンとの交渉の内幕
+  国防総省との数週間にわたる契約交渉が「あらゆる合法的使用」の3語を巡り難航
+  SNSでの公開声明や匿名のペンタゴン幹部発言を通じて交渉が展開
+  3800億ドル規模のスタートアップの将来を左右する重大局面
+  → https://www.theverge.com/ai-artificial-intelligence/883456/anthropic-pentagon-department-of-defense-negotiations
+
+【3】OpenAI投資家がAnthropicにも出資、忠誠心崩壊
+  OpenAIに投資したVCの12社以上がAnthropicにも出資していることが判明
+  長年守られてきた利益相反回避のルールが事実上無視されている状況
+  AI業界への資金流入が加速する中で投資家の「乗り換え」が常態化
+  → https://techcrunch.com/2026/02/23/with-ai-investor-loyalty-is-almost-dead-at-least-a-dozen-openai-vcs-now-also-back-anthropic/
+
+【4】Anthropic、ノンコーダー向けCoworkエージェント公開
+  Claude Desktopで動作する新AIエージェント「Cowork」をリサーチプレビューとして公開
+  コーディング不要でファイル操作や業務自動化が可能
+  人気のClaude Codeの技術を非技術者向けに拡張したもの
+  → https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no
+
+【5】OpenAI、企業向けに4大コンサルと提携
+  OpenAI Frontier AIエージェントプラットフォームの普及促進を目的に4社の大手コンサルと連携
+  エンタープライズ市場への本格展開を加速させる戦略的パートナーシップ
+  AI導入支援を通じて企業顧客の拡大を図る
+  → https://techcrunch.com/2026/02/23/openai-calls-in-the-consultants-for-its-enterprise-push/
+
+【6】SalesforceがSlackbotをAIエージェントに刷新
+  Slackbotを単純な通知ツールから高度なAIエージェントへと全面再構築
+  MicrosoftやGoogleとの職場AI覇権争いが激化
+  ワークフロー自動化や複雑なタスク処理が可能になる
+  → https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and
+
+【7】SamsungがGalaxy AIにPerplexityを統合
+  Galaxy S26ユーザーは「ヘイ、プレックス」と呼びかけるだけでPerplexityを利用可能
+  Bixby・Geminiに続くマルチエージェントエコシステムの一環として導入
+  異なるAIエージェントを用途別に使い分ける「マルチエージェント」戦略を採用
+  → https://www.theverge.com/tech/882921/samsung-is-adding-perplexity-to-galaxy-ai
+
+【8】Claude Code作者がワークフローを公開し話題
+  世界最先端のコーディングエージェント作者がX（旧Twitter）で詳細な開発ワークフローを披露
+  エンジニアコミュニティが1週間以上にわたってスレッドを分析・議論
+  AIコーディングの実践的な使い方として開発者の間で大きな反響
+  → https://venturebeat.com/technology/the-creator-of-claude-code-just-revealed-his-workflow-and-developers-are
+
+【9】無料のGooseがClaude Codeの代替に浮上
+  Claude Codeは月額最大200ドルかかる一方、同等機能を持つオープンソースのGooseが無料で利用可能
+  AIコーディング革命のコスト問題が開発者の間で大きな議論を呼ぶ
+  自律的なコード作成・デバッグ・デプロイが無償で実現できる点が注目される
+  → https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free
+
+【10】Nous Research、オープンソース14Bコーディングモデル公開
+  NousCoder-14Bはいくつかの大規模プロプライエタリモデルに匹敵する性能を持つ
+  Claude Codeが注目を集めるタイミングに合わせた公開が戦略的と評価
+  暗号系VCのParadigm支援を受けるNous Researchが競合モデルに一石を投じる
+  → https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in
+
+【11】AIエージェントが受信箱を暴走、セキュリティ研究者が警告
+  MetaのAIセキュリティ研究者がOpenClawエージェントに受信箱を荒らされた体験をX上で公開
+  AIエージェントにタスクを委任する際の危険性を具体的に示す事例として注目
+  AIの自律行動がもたらすリスクへの警戒を呼びかける内容が広くバイラル拡散
+  → https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/
+
+【12】AmazonのAIコーディングエージェントが13時間障害引き起こす
+  AIコーディングアシスタント「Kiro」の操作ミスが昨年12月のAWS13時間障害の原因と報道
+  AmazonはAIではなく人間の従業員の責任と主張し物議を醸す
+  AIエージェントの判断ミスが大規模インフラに与えるリスクを浮き彫りに
+  → https://www.theverge.com/ai-artificial-intelligence/882005/amazon-blames-human-employees-for-an-ai-coding-agents-mistake
+
+【13】Canva、アニメーション・マーケティングのスタートアップを買収
+  動画制作機能強化と詳細なマーケティング計測を目的に複数のスタートアップを買収
+  総合マーケティングソリューションとしての地位を固める戦略の一環
+  Canvaのプロダクト拡張でビデオクリエイション分野への本格参入が見込まれる
+  → https://techcrunch.com/2026/02/23/canva-acquires-startups-working-on-animation-and-marketing/
+
+【14】Googleクラウド、モデル能力の3フロンティアをリード
+  AI性能の競争軸は「知能の高さ」「応答速度」「拡張性」の3つに整理される
+  GoogleのCloud AIがこれら3つの領域で先行していると分析
+  拡張性（エクステンシビリティ）が次世代AIモデルの重要な差別化要素に
+  → https://techcrunch.com/2026/02/23/googles-cloud-ai-lead-on-the-three-frontiers-of-model-capability/
+
+【15】Guide Labs、解釈可能な新型LLM「Steerling-8B」公開
+  80億パラメータのLLM「Steerling-8B」をオープンソースで公開
+  AIの判断・行動を人間が理解・追跡しやすい新アーキテクチャを採用
+  AIの透明性・説明可能性の向上を目指す取り組みとして注目
+  → https://techcrunch.com/2026/02/23/guide-labs-debuts-a-new-kind-of-interpretable-llm/
+
+【16】Railwayが100億円超調達、AWS対抗のAIクラウド構築
+  サンフランシスコ拠点のクラウドプラットフォームRailwayがシリーズBで1億ドルを調達
+  マーケティング費用ゼロながら200万人の開発者を獲得した実績を持つ
+  AIアプリ需要の急増を追い風にAIネイティブなインフラとしてAWS対抗を目指す
+  → https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud
+
+【17】Listen Labsが69M調達、AI顧客インタビューを拡大
+  バイラルなビルボード採用キャンペーンで話題を集めたListen Labsが6900万ドルを調達
+  AIを活用した顧客インタビュープラットフォームのスケールアップを目指す
+  Metaの大型採用オファーに対抗するため独自の採用戦略で注目を集めた経緯
+  → https://venturebeat.com/technology/listen-labs-raises-usd69m-after-viral-billboard-hiring-stunt-to-scale-ai
+
+【18】トランプ政権、AI電力需要増の中で発電所規制を撤廃
+  AIデータセンター建設に伴う電力需要増加の中、バイデン時代の水銀などの有害物質排出規制（MATS）を廃止
+  石炭火力発電所の汚染物質排出が再び増加する懸念が高まる
+  AIインフラ拡張と環境保護のトレードオフが政策的な争点として浮上
+  → https://www.theverge.com/science/882288/trump-ai-data-center-power-plant-pollution-mercury-mats
+
+【19】タンブラーリッジ銃撃犯、事前にChatGPTで暴力描写
+  カナダ・タンブラーリッジの学校銃撃事件の容疑者が事件数か月前にChatGPTで銃撃暴力シナリオを相談
+  AIの自動安全機能が作動したが事件を防げなかったことで対応の限界が問われる
+  AIチャットボットと暴力事件の関係について社会的議論が再燃
+  → https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt
+
+【20】Particleのニュースアプリ、ポッドキャストの要点をAIで抽出
+  AIニュースアプリParticleがポッドキャストから関連クリップを自動抽出する新機能を追加
+  記事に関連した短い音声クリップをその場で再生できる没入型体験を提供
+  ユーザーが長時間のポッドキャストを聴かなくても重要な情報を即座に取得可能に
+  → https://techcrunch.com/2026/02/23/particles-ai-news-app-listens-to-podcasts-for-interesting-clips-so-you-you-dont-have-to/
+
+================================================================
+ まとめ
+================================================================
+
+本日最大の注目はAnthropicを巡る動きで、中国AI企業によるClaude不正利用の告発、国防総省との緊張交渉、そして非技術者向けCoworkエージェントの公開と、同社が複数の重要局面を同時に迎えている。
+AIエージェントの自律行動リスクが改めて浮き彫りになった一日でもあり、MetaのセキュリティWiki研究者の受信箱暴走事例やAWSの13時間障害がAIコーディングエージェントの誤作動に起因するとの報道が相次いだ。
+AIへの投資・資金調達は引き続き活発で、Railwayの1億ドル調達やListen Labsの6900万ドル調達のほか、OpenAIとAnthropicへの重複投資問題が業界の過熱ぶりを象徴している。
+
+================================================================
