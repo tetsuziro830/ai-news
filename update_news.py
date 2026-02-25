@@ -26,6 +26,7 @@ HTML_TEMPLATE = """\
   <style>
     .source-row {{ display: flex; align-items: center; gap: 0.8rem; margin-top: 0.5rem; }}
     .pub-time {{ color: #6e7681; font-size: 0.78rem; white-space: nowrap; }}
+    .updated-at {{ color: #6e7681; font-size: 0.85rem; margin-top: 0.2rem; }}
   </style>
 </head>
 <body>
@@ -33,6 +34,7 @@ HTML_TEMPLATE = """\
     <header>
       <h1>今日のAIニュース</h1>
       <p class="date">{date}</p>
+      <p class="updated-at">最終更新：{fetched_at} JST</p>
     </header>
     <div class="news-grid">
 {cards}
@@ -133,7 +135,7 @@ def generate_news_with_gemini(articles):
     return json.loads(raw)
 
 
-def build_html(news_items, summary_lines, date_str):
+def build_html(news_items, summary_lines, date_str, fetched_at):
     cards_html = ""
     for item in news_items:
         num = str(item.get("number", "")).zfill(2)
@@ -158,7 +160,12 @@ def build_html(news_items, summary_lines, date_str):
         )
 
     summary_paragraphs = "\n".join(f'      <p>{s}</p>' for s in summary_lines)
-    return HTML_TEMPLATE.format(date=date_str, cards=cards_html, summary_paragraphs=summary_paragraphs)
+    return HTML_TEMPLATE.format(
+        date=date_str,
+        cards=cards_html,
+        summary_paragraphs=summary_paragraphs,
+        fetched_at=fetched_at,
+    )
 
 
 def build_txt(news_items, summary_lines, date_str, fetched_at):
@@ -222,7 +229,7 @@ def main():
     print(f"  {len(news_items)} 件のニュースを生成")
 
     # HTML出力
-    html_content = build_html(news_items, summary_lines, date_str)
+    html_content = build_html(news_items, summary_lines, date_str, fetched_at)
     with open("ai.html", "w", encoding="utf-8") as f:
         f.write(html_content)
 

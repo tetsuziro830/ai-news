@@ -59,3 +59,9 @@ header p.date { color: #8b949e; font-size: 0.95rem; }
 .summary-section h3 { font-size: 1.1rem; color: #bc8cff; margin-bottom: 0.8rem; }
 .summary-section p { color: #8b949e; font-size: 0.93rem; margin-bottom: 0.4rem; }
 footer { text-align: center; margin-top: 3rem; color: #484f58; font-size: 0.8rem; }
+
+.updated-at {
+  color: #6e7681;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
