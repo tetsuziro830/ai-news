@@ -4,6 +4,7 @@ import feedparser
 from google import genai
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
+from urllib.parse import urlparse
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv()
@@ -13,7 +14,29 @@ RSS_FEEDS = [
     "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
     "https://venturebeat.com/category/ai/feed/",
     "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+    "https://www.theguardian.com/technology/artificialintelligenceai/rss",
+    "https://www.artificialintelligence-news.com/feed/",
 ]
+
+# ドメインからサイト名へのマッピング
+SITE_NAMES = {
+    "techcrunch.com": "TechCrunch",
+    "www.theverge.com": "The Verge",
+    "venturebeat.com": "VentureBeat",
+    "www.technologyreview.com": "MIT Technology Review",
+    "www.theguardian.com": "The Guardian",
+    "www.artificialintelligence-news.com": "AI News",
+}
+
+
+def get_site_name(url: str) -> str:
+    """URLからサイト名を返す。マッピングにない場合はドメインをそのまま返す。"""
+    try:
+        domain = urlparse(url).netloc
+        return SITE_NAMES.get(domain, domain)
+    except Exception:
+        return ""
+
 
 HTML_TEMPLATE = """\
 <!DOCTYPE html>
@@ -27,6 +50,7 @@ HTML_TEMPLATE = """\
     .source-row {{ display: flex; align-items: center; gap: 0.8rem; margin-top: 0.5rem; }}
     .pub-time {{ color: #6e7681; font-size: 0.78rem; white-space: nowrap; }}
     .updated-at {{ color: #6e7681; font-size: 0.85rem; margin-top: 0.2rem; }}
+    .site-name {{ color: #6e7681; font-size: 0.78rem; white-space: nowrap; }}
   </style>
 </head>
 <body>
@@ -65,7 +89,7 @@ def parse_published(entry):
     return ""
 
 
-def fetch_articles(max_per_feed=8):
+def fetch_articles(max_per_feed=5):
     articles = []
     for url in RSS_FEEDS:
         print(f"  Fetching: {url}")
@@ -148,7 +172,14 @@ def build_html(news_items, summary_lines, date_str, fetched_at):
 
         if url:
             time_str = f'<span class="pub-time">{published}</span>' if published else ""
-            source_html = f'\n        <div class="source-row">{time_str}<a class="source" href="{url}" target="_blank">元記事を読む →</a></div>'
+            site_name = get_site_name(url)
+            site_str = f'<span class="site-name">{site_name}</span>' if site_name else ""
+            source_html = (
+                f'\n        <div class="source-row">'
+                f'{time_str}{site_str}'
+                f'<a class="source" href="{url}" target="_blank">元記事を読む →</a>'
+                f'</div>'
+            )
         else:
             source_html = ""
 
@@ -186,6 +217,10 @@ def build_txt(news_items, summary_lines, date_str, fetched_at):
         lines.append(f"【{num}】{title}")
         if published:
             lines.append(f"  掲載日時: {published}")
+        if url:
+            site_name = get_site_name(url)
+            if site_name:
+                lines.append(f"  メディア: {site_name}")
         for p in points:
             lines.append(f"  {p}")
         if url:
