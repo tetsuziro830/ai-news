@@ -148,3 +148,16 @@ Gemini APIでニュース生成中...
   Gemini APIに問い合わせ中...
   20 件のニュースを生成
 [2026-03-08 00:01:09] 完了: ai.html / source_texts/20260308_000003.txt を更新しました
+[2026-03-09 00:00:02] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-03-09 00:00:53] 完了: ai.html / source_texts/20260309_000002.txt を更新しました

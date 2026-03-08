@@ -2,31 +2,61 @@
   {
     "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
     "name": "TechCrunch",
-    "max_items": 5
+    "max_items": 5,
+    "category": "ai"
   },
   {
     "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
     "name": "The Verge",
-    "max_items": 5
+    "max_items": 5,
+    "category": "ai"
   },
   {
     "url": "https://venturebeat.com/category/ai/feed/",
     "name": "VentureBeat",
-    "max_items": 5
+    "max_items": 5,
+    "category": "ai"
   },
   {
     "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
     "name": "MIT Technology Review",
-    "max_items": 5
+    "max_items": 5,
+    "category": "ai"
   },
   {
     "url": "https://www.theguardian.com/technology/artificialintelligenceai/rss",
     "name": "The Guardian",
-    "max_items": 5
+    "max_items": 5,
+    "category": "ai"
   },
   {
     "url": "https://www.artificialintelligence-news.com/feed/",
     "name": "AI News",
-    "max_items": 5
+    "max_items": 5,
+    "category": "ai"
+  },
+  {
+    "url": "https://www.theguardian.com/politics/rss",
+    "name": "The Guardian Politics",
+    "max_items": 5,
+    "category": "politics"
+  },
+  {
+    "url": "https://feeds.bbci.co.uk/news/politics/rss.xml",
+    "name": "BBC Politics",
+    "max_items": 5,
+    "category": "politics"
+  },
+  {
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "name": "NYT Politics",
+    "max_items": 5,
+    "category": "politics"
+  },
+  {
+    "url": "https://www.reuters.com/rssFeed/politicsNews",
+    "name": "Reuters Politics",
+    "max_items": 5,
+    "category": "politics"
   }
 ]
