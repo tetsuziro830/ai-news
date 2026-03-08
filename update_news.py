@@ -89,13 +89,24 @@ def parse_published(entry):
     return ""
 
 
-def fetch_articles(max_per_feed=5):
+def load_feeds_config():
+    feeds_file = "feeds.json"
+    if os.path.exists(feeds_file):
+        with open(feeds_file, "r", encoding="utf-8") as f:
+            return json.load(f)
+    # feeds.jsonがなければRSS_FEEDSをそのまま使う（後方互換）
+    return [{"url": u, "name": "", "max_items": 5} for u in RSS_FEEDS]
+
+def fetch_articles():
+    feeds_config = load_feeds_config()
     articles = []
-    for url in RSS_FEEDS:
+    for feed_conf in feeds_config:
+        url = feed_conf["url"]
+        max_items = feed_conf.get("max_items", 5)
         print(f"  Fetching: {url}")
         try:
             feed = feedparser.parse(url)
-            for entry in feed.entries[:max_per_feed]:
+            for entry in feed.entries[:max_items]:
                 title = entry.get("title", "").strip()
                 summary = entry.get("summary", entry.get("description", "")).strip()
                 link = entry.get("link", "")
@@ -110,7 +121,6 @@ def fetch_articles(max_per_feed=5):
         except Exception as e:
             print(f"  [ERROR] Failed to fetch {url}: {e}")
     return articles
-
 
 def generate_news_with_gemini(articles):
     api_key = os.environ.get("GEMINI_API_KEY")

@@ -28,3 +28,123 @@ Traceback (most recent call last):
   File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/anthropic/_base_client.py", line 1137, in request
     raise self._make_status_error_from_response(err.response) from None
 anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYT6NRZiSpTwwdChqpEcj'}
+[2026-02-27 00:00:03] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  合計 31 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-02-27 00:00:48] 完了: ai.html / source_texts/20260227_000003.txt を更新しました
+[2026-02-28 00:00:03] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  合計 31 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-02-28 00:00:55] 完了: ai.html / source_texts/20260228_000003.txt を更新しました
+[2026-03-01 00:00:03] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  合計 31 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-03-01 00:01:08] 完了: ai.html / source_texts/20260301_000003.txt を更新しました
+[2026-03-02 00:00:03] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  合計 31 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-03-02 00:00:50] 完了: ai.html / source_texts/20260302_000003.txt を更新しました
+[2026-03-03 00:00:03] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  合計 31 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-03-03 00:01:03] 完了: ai.html / source_texts/20260303_000003.txt を更新しました
+[2026-03-04 00:00:02] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-03-04 00:01:06] 完了: ai.html / source_texts/20260304_000002.txt を更新しました
+[2026-03-05 00:00:03] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-03-05 00:00:53] 完了: ai.html / source_texts/20260305_000003.txt を更新しました
+[2026-03-06 00:00:03] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-03-06 00:01:03] 完了: ai.html / source_texts/20260306_000003.txt を更新しました
+[2026-03-07 00:00:03] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-03-07 00:01:23] 完了: ai.html / source_texts/20260307_000003.txt を更新しました
+[2026-03-08 00:00:03] AIニュース更新開始
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中...
+  20 件のニュースを生成
+[2026-03-08 00:01:09] 完了: ai.html / source_texts/20260308_000003.txt を更新しました
