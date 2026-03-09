@@ -161,3 +161,32 @@ Gemini APIでニュース生成中...
   Gemini APIに問い合わせ中...
   20 件のニュースを生成
 [2026-03-09 00:00:53] 完了: ai.html / source_texts/20260309_000002.txt を更新しました
+[2026-03-10 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260310_000003_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  合計 15 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260310_000003_politics.txt を更新しました
+
+[2026-03-10 00:01:27] 全カテゴリ完了

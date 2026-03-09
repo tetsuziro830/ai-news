@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日のニュースポータル</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .category-grid {
+      display: grid;
+      gap: 1.6rem;
+      margin-top: 2rem;
+    }
+    .category-card {
+      display: block;
+      text-decoration: none;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 16px;
+      padding: 1.6rem 1.8rem;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .category-card:hover {
+      border-color: #58a6ff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+    .category-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: #f0f6fc;
+    }
+    .category-badge {
+      display: inline-block;
+      margin-bottom: 0.4rem;
+      padding: 0.15rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #1f6feb, #388bfd);
+      color: #fff;
+    }
+    .category-desc {
+      color: #8b949e;
+      font-size: 0.93rem;
+    }
+    .category-meta {
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      color: #6e7681;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>今日のニュースポータル</h1>
+      <p class="date">AIニュース &amp; 政治ニュースへの入り口</p>
+    </header>
+
+    <div class="category-grid">
+      <a class="category-card" href="ai.html">
+        <div class="category-badge">AI</div>
+        <div class="category-title">今日のAIニュース</div>
+        <p class="category-desc">
+          海外メディアのAI関連記事をもとに、日本語で要点を整理したAIニュースまとめです。
+        </p>
+        <p class="category-meta">更新スクリプト: update_news.py / 出力: ai.html, ai.txt</p>
+      </a>
+
+      <a class="category-card" href="politics.html">
+        <div class="category-badge">Politics</div>
+        <div class="category-title">今日の政治ニュース</div>
+        <p class="category-desc">
+          世界の政治・国際情勢に関する重要トピックを、日本語でコンパクトに整理した政治ニュースです。
+        </p>
+        <p class="category-meta">出力ファイル: politics.html</p>
+      </a>
+    </div>
+
+    <footer>
+      <p>今日のニュースポータル &copy; Auto-generated contents</p>
+    </footer>
+  </div>
+</body>
+</html>
+
