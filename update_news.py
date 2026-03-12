@@ -301,7 +301,8 @@ def process_category(category, now):
 
 
 def main():
-    now = datetime.now()
+    JST = timezone(timedelta(hours=9))
+    now = datetime.now(JST)
     fetched_at = now.strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{fetched_at}] ニュース更新開始")
 
