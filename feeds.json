@@ -58,5 +58,11 @@
     "name": "Reuters Politics",
     "max_items": 5,
     "category": "politics"
+  },
+  {
+    "url": "https://globalnews.ca/politics/feed/",
+    "name": "Global News",
+    "max_items": 5,
+    "category": "politics"
   }
 ]
