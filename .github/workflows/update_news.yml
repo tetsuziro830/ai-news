@@ -1,8 +1,11 @@
 name: Update AI News
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '0 * * * *'  # 1時間ごと
   workflow_dispatch:
 
 jobs:
