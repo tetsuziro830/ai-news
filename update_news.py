@@ -2,7 +2,7 @@ import os
 import json
 import feedparser
 from google import genai
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
 from urllib.parse import urlparse
 
