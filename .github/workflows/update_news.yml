@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 * * * *'  # 1時間ごと
+    - cron: '0 */4 * * *'  # 4時間ごと
   workflow_dispatch:
 
 jobs:
