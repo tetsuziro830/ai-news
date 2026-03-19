@@ -1,5 +1,0 @@
-.env
-venv/
-cron_log.txt
-__pycache__/
-*.pyc
