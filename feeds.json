@@ -64,5 +64,35 @@
     "name": "Global News",
     "max_items": 5,
     "category": "politics"
+  },
+  {
+    "url": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
+    "name": "CNBC (US)",
+    "max_items": 5,
+    "category": "financial"
+  },
+  {
+    "url": "https://www.ft.com/?format=rss",
+    "name": "Financial Times (UK)",
+    "max_items": 5,
+    "category": "financial"
+  },
+  {
+    "url": "https://www.france24.com/en/business/rss",
+    "name": "France 24 Business (FR)",
+    "max_items": 5,
+    "category": "financial"
+  },
+  {
+    "url": "https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms",
+    "name": "The Economic Times (IN)",
+    "max_items": 5,
+    "category": "financial"
+  },
+  {
+    "url": "https://www.aljazeera.com/xml/rss/all.xml",
+    "name": "Al Jazeera Business (ME)",
+    "max_items": 5,
+    "category": "financial"
   }
 ]

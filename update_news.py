@@ -20,6 +20,11 @@ SITE_NAMES = {
     "feeds.bbci.co.uk": "BBC Politics",
     "rss.nytimes.com": "NYT Politics",
     "www.reuters.com": "Reuters Politics",
+    "www.cnbc.com": "CNBC",
+    "www.ft.com": "Financial Times",
+    "www.france24.com": "France 24",
+    "economictimes.indiatimes.com": "The Economic Times",
+    "www.aljazeera.com": "Al Jazeera",
 }
 
 CATEGORY_CONFIG = {
@@ -34,6 +39,12 @@ CATEGORY_CONFIG = {
         "title": "今日の政治ニュース",
         "html_file": "politics.html",
         "prompt_intro": "以下の英語記事リストを参考に、{today}の「今日の政治ニュース」を日本語で20本作成してください。",
+    },
+    "financial": {
+        "role": "金融・経済ニュースの専門ライター",
+        "title": "今日の金融ニュース",
+        "html_file": "financial.html",
+        "prompt_intro": "以下の英語記事リストを参考に、{today}の「今日の金融ニュース」を日本語で20本作成してください。世界各国の視点をバランスよく取り入れてください。",
     },
 }
 
