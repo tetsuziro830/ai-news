@@ -28,6 +28,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ai.html politics.html
+          git add ai.html politics.html financial.html
           git diff --staged --quiet || git commit -m "AI news updated: $(date +'%Y-%m-%d %H:%M')"
           git push
