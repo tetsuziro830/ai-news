@@ -602,3 +602,3043 @@ Traceback (most recent call last):
   File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
     raise ServerError(status_code, response_json, response)
 google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-03-27 00:00:57] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-03-28 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260328_000003_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 191, in generate_news_with_gemini
+    return json.loads(raw)
+           ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Invalid control character at: line 175 column 95 (char 6971)
+[2026-03-29 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260329_000003_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260329_000003_politics.txt を更新しました
+
+--- 今日の金融ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  Fetching: https://www.ft.com/?format=rss
+  Fetching: https://www.france24.com/en/business/rss
+  Fetching: https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms
+  Fetching: https://www.aljazeera.com/xml/rss/all.xml
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=financial)
+  20 件のニュースを生成
+完了: financial.html / source_texts/20260329_000003_financial.txt を更新しました
+
+[2026-03-29 00:02:40] 全カテゴリ完了
+[2026-03-30 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260330_000003_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260330_000003_politics.txt を更新しました
+
+--- 今日の金融ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  Fetching: https://www.ft.com/?format=rss
+  Fetching: https://www.france24.com/en/business/rss
+  Fetching: https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms
+  Fetching: https://www.aljazeera.com/xml/rss/all.xml
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=financial)
+  20 件のニュースを生成
+完了: financial.html / source_texts/20260330_000003_financial.txt を更新しました
+
+[2026-03-30 00:02:22] 全カテゴリ完了
+[2026-03-31 00:00:04] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260331_000004_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260331_000004_politics.txt を更新しました
+
+--- 今日の金融ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  Fetching: https://www.ft.com/?format=rss
+  Fetching: https://www.france24.com/en/business/rss
+  Fetching: https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms
+  Fetching: https://www.aljazeera.com/xml/rss/all.xml
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=financial)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-01 00:00:02] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260401_000002_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-02 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260402_000003_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260402_000003_politics.txt を更新しました
+
+--- 今日の金融ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  Fetching: https://www.ft.com/?format=rss
+  Fetching: https://www.france24.com/en/business/rss
+  Fetching: https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms
+  Fetching: https://www.aljazeera.com/xml/rss/all.xml
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=financial)
+  20 件のニュースを生成
+完了: financial.html / source_texts/20260402_000003_financial.txt を更新しました
+
+[2026-04-02 00:02:44] 全カテゴリ完了
+[2026-04-03 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260403_000003_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260403_000003_politics.txt を更新しました
+
+--- 今日の金融ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  Fetching: https://www.ft.com/?format=rss
+  Fetching: https://www.france24.com/en/business/rss
+  Fetching: https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms
+  Fetching: https://www.aljazeera.com/xml/rss/all.xml
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=financial)
+  20 件のニュースを生成
+完了: financial.html / source_texts/20260403_000003_financial.txt を更新しました
+
+[2026-04-03 00:02:35] 全カテゴリ完了
+[2026-04-04 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260404_000003_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260404_000003_politics.txt を更新しました
+
+--- 今日の金融ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  Fetching: https://www.ft.com/?format=rss
+  Fetching: https://www.france24.com/en/business/rss
+  Fetching: https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms
+  Fetching: https://www.aljazeera.com/xml/rss/all.xml
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=financial)
+  20 件のニュースを生成
+完了: financial.html / source_texts/20260404_000003_financial.txt を更新しました
+
+[2026-04-04 00:02:54] 全カテゴリ完了
+[2026-04-05 00:00:02] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260405_000002_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 191, in generate_news_with_gemini
+    return json.loads(raw)
+           ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Invalid control character at: line 159 column 103 (char 5519)
+[2026-04-06 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260406_000003_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260406_000003_politics.txt を更新しました
+
+--- 今日の金融ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  Fetching: https://www.ft.com/?format=rss
+  Fetching: https://www.france24.com/en/business/rss
+  Fetching: https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms
+  Fetching: https://www.aljazeera.com/xml/rss/all.xml
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=financial)
+  20 件のニュースを生成
+完了: financial.html / source_texts/20260406_000003_financial.txt を更新しました
+
+[2026-04-06 00:02:12] 全カテゴリ完了
+[2026-04-07 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260407_000003_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260407_000003_politics.txt を更新しました
+
+--- 今日の金融ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  Fetching: https://www.ft.com/?format=rss
+  Fetching: https://www.france24.com/en/business/rss
+  Fetching: https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms
+  Fetching: https://www.aljazeera.com/xml/rss/all.xml
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=financial)
+  20 件のニュースを生成
+完了: financial.html / source_texts/20260407_000003_financial.txt を更新しました
+
+[2026-04-07 00:02:34] 全カテゴリ完了
+[2026-04-08 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-09 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-10 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-11 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-12 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-13 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-14 00:00:04] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-15 00:00:04] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-16 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-17 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-18 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-19 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-20 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-21 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-22 00:00:04] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-23 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-24 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-25 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-26 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-27 00:00:04] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260427_000004_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260427_000004_politics.txt を更新しました
+
+--- 今日の金融ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  Fetching: https://www.ft.com/?format=rss
+  Fetching: https://www.france24.com/en/business/rss
+  Fetching: https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms
+  Fetching: https://www.aljazeera.com/xml/rss/all.xml
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=financial)
+  20 件のニュースを生成
+完了: financial.html / source_texts/20260427_000004_financial.txt を更新しました
+
+[2026-04-27 00:02:23] 全カテゴリ完了
+[2026-04-28 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-29 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-04-30 00:00:04] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-01 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-02 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-03 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-04 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-05 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-06 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-07 00:00:02] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-08 00:00:04] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-09 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-10 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+  20 件のニュースを生成
+完了: ai.html / source_texts/20260510_000003_ai.txt を更新しました
+
+--- 今日の政治ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.theguardian.com/politics/rss
+  Fetching: https://feeds.bbci.co.uk/news/politics/rss.xml
+  Fetching: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  Fetching: https://www.reuters.com/rssFeed/politicsNews
+  Fetching: https://globalnews.ca/politics/feed/
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=politics)
+  20 件のニュースを生成
+完了: politics.html / source_texts/20260510_000003_politics.txt を更新しました
+
+--- 今日の金融ニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  Fetching: https://www.ft.com/?format=rss
+  Fetching: https://www.france24.com/en/business/rss
+  Fetching: https://economictimes.indiatimes.com/news/economy/rssfeeds/13733806.cms
+  Fetching: https://www.aljazeera.com/xml/rss/all.xml
+  合計 20 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=financial)
+  20 件のニュースを生成
+完了: financial.html / source_texts/20260510_000003_financial.txt を更新しました
+
+[2026-05-10 00:03:10] 全カテゴリ完了
+[2026-05-11 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-12 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-13 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-14 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-15 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[2026-05-16 00:00:03] ニュース更新開始
+
+--- 今日のAIニュース 処理開始 ---
+RSSフィード取得中...
+  Fetching: https://techcrunch.com/category/artificial-intelligence/feed/
+  Fetching: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+  Fetching: https://venturebeat.com/category/ai/feed/
+  Fetching: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Fetching: https://www.theguardian.com/technology/artificialintelligenceai/rss
+  Fetching: https://www.artificialintelligence-news.com/feed/
+  合計 30 件の記事を取得
+Gemini APIでニュース生成中...
+  Gemini APIに問い合わせ中... (category=ai)
+Traceback (most recent call last):
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 327, in <module>
+    main()
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 321, in main
+    process_category(category, now)
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 293, in process_category
+    data = generate_news_with_gemini(articles, category=category)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/update_news.py", line 179, in generate_news_with_gemini
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 5621, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/models.py", line 4283, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/tepi5/projects/17-ainews/venv/lib/python3.11/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
