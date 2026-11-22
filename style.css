@@ -54,7 +54,7 @@ header p.date { color: #8b949e; font-size: 0.95rem; }
   border-left: 4px solid #bc8cff;
   border-radius: 12px;
   padding: 1.4rem 1.6rem;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .summary-section h3 { font-size: 1.1rem; color: #bc8cff; margin-bottom: 0.8rem; }
 .summary-section p { color: #8b949e; font-size: 0.93rem; margin-bottom: 0.4rem; }
